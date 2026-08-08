@@ -1,3 +1,13 @@
-node_modules/
+# VS Code
 .vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
 *.log
