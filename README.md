@@ -41,3 +41,21 @@ StudentManagement/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+## Testing
+
+The following functionalities were tested successfully:
+
+- Student registration with Student ID, Name, and Course.
+- Prevention of duplicate Student IDs.
+- Display of registered student details.
+- Student search using Student ID.
+- Student deletion with confirmation.
+- Validation of empty input fields.
+
+## Git Version Control
+
+The project was maintained using Git and GitHub.
+
+The feature-based branching strategy allows individual functionalities to be developed independently before being integrated into the `develop` branch. After all features were tested and integrated, the `develop` branch was prepared for merging into the stable `main` branch.
+
+This workflow helps reduce conflicts, maintains a stable production branch, and supports collaborative development.
