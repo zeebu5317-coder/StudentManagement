@@ -35,7 +35,6 @@ function addStudent() {
     displayStudents();
 }
 
-
 function displayStudents() {
 
     const tableBody = document.getElementById("studentTableBody");
@@ -50,11 +49,19 @@ function displayStudents() {
             <td>${student.id}</td>
             <td>${student.name}</td>
             <td>${student.course}</td>
+            <td>
+                <button
+                    class="delete-btn"
+                    onclick="deleteStudent('${student.id}')">
+                    Delete
+                </button>
+            </td>
         `;
 
         tableBody.appendChild(row);
     });
-}function searchStudent() {
+}
+function searchStudent() {
 
     const searchId = document.getElementById("searchId").value.trim();
 
@@ -80,4 +87,20 @@ function displayStudents() {
 
         result.innerHTML = "Student not found.";
     }
+}
+function deleteStudent(id) {
+
+    const confirmation = confirm(
+        "Are you sure you want to delete this student?"
+    );
+
+    if (!confirmation) {
+        return;
+    }
+
+    students = students.filter(student => student.id !== id);
+
+    displayStudents();
+
+    alert("Student deleted successfully.");
 }
