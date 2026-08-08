@@ -54,4 +54,30 @@ function displayStudents() {
 
         tableBody.appendChild(row);
     });
+}function searchStudent() {
+
+    const searchId = document.getElementById("searchId").value.trim();
+
+    const result = document.getElementById("searchResult");
+
+    if (searchId === "") {
+        result.innerHTML = "Please enter a Student ID.";
+        return;
+    }
+
+    const student = students.find(student => student.id === searchId);
+
+    if (student) {
+
+        result.innerHTML = `
+            Student Found:<br>
+            ID: ${student.id}<br>
+            Name: ${student.name}<br>
+            Course: ${student.course}
+        `;
+
+    } else {
+
+        result.innerHTML = "Student not found.";
+    }
 }
